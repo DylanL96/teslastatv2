@@ -34,3 +34,4 @@ build/
 
 ### VS Code ###
 .vscode/
+backend/src/main/java/com/example/backend/Config/FirebaseConfig.java
