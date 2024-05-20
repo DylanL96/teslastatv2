@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 // import {API_KEY} from '../utils/config'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash} from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTrash} from '@fortawesome/free-solid-svg-icons';
 import {useNavigate} from 'react-router-dom';
 
 const AnalystComponent = () => {
@@ -47,21 +47,21 @@ const AnalystComponent = () => {
   }, [])
 
  
-  const deleteHandler = id => {
-    axios.delete(`http://localhost:8080/api/v1/delete/${id}`)
-      .then(result => {
-        setDelPost(delPost.filter(element => element._id !==id));
-        console.log('Deleted!')
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  };
+  // const deleteHandler = id => {
+  //   axios.delete(`http://localhost:8080/api/v1/delete/${id}`)
+  //     .then(result => {
+  //       setDelPost(delPost.filter(element => element._id !==id));
+  //       console.log('Deleted!')
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // };
 
 
-  const editHandler = id => {
-    navigate(`/api/v1/${id}`)
-  }
+  // const editHandler = id => {
+  //   navigate(`/api/v1/${id}`)
+  // }
 
  
   const renderTable = () => {
