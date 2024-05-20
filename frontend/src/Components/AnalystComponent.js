@@ -4,13 +4,13 @@ import Table from 'react-bootstrap/Table';
 // import {API_KEY} from '../utils/config'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faTrash} from '@fortawesome/free-solid-svg-icons';
-import {useNavigate} from 'react-router-dom';
+//import {useNavigate} from 'react-router-dom';
 
 const AnalystComponent = () => {
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
   const [data, setData] = useState();
   const [date, setDate] = useState();
-  const [delPost, setDelPost] = useState([]);
+  //const [delPost, setDelPost] = useState([]);
   const [quantity, setQuantity] = useState('');
   const [stockPrice, setStockPrice] = useState('');
   const [order, setOrder] = useState('ASC');
