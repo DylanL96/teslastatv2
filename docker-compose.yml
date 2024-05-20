@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    image: backend:latest
+    container_name: backend
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - DATABASE_URL=https:///Analyst/FUQzFjrgrX7aBKgXLTrx.firebaseio.com
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/serviceAccountKey.json
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    image: frontend:latest
+    container_name: frontend
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
