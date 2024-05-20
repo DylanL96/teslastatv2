@@ -12,6 +12,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/analysts")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AnalystController {
 
     @Autowired
